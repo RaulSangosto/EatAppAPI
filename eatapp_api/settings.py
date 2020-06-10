@@ -25,7 +25,7 @@ SECRET_KEY = '(!9j(yc1x)1@bgxmoq0zr92$1bwr1o-^$9=b(as-k_eb7dtiv2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eatapp.o2w.es']
 
 
 # Application definition
