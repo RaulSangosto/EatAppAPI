@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(!9j(yc1x)1@bgxmoq0zr92$1bwr1o-^$9=b(as-k_eb7dtiv2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['eatapp.o2w.es']
 
@@ -130,4 +130,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+DJANGO_ROOT = dirname(abspath(__file__))
+SITE_HTDOCS = normpath(join(DJANGO_ROOT, '../htdocs'))
+STATIC_ROOT = normpath(join(SITE_HTDOCS, 'static')) + "/"
 STATIC_URL = '/static/'
+MEDIA_ROOT = normpath(join(SITE_HTDOCS, 'media'))
+MEDIA_URL = '/media/'
