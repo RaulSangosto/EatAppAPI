@@ -8,7 +8,7 @@ from receta.viewsets.alergeno import AlergenoViewSet
 from receta.viewsets.categoria import CategoriaViewSet
 from receta.viewsets.instruccion import InstruccionViewSet
 
-router = routers.DefaultRouter(trailing_slash=False)
+router = routers.DefaultRouter(trailing_slash=True)
 
 router.register("recetas", RecetaViewSet, basename='recetas')
 router.register("ingredientes", IngredienteViewSet, basename='ingredientes')
