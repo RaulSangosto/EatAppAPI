@@ -40,6 +40,8 @@ def get_user(uuid):
 
 class PerfilViewSet(viewsets.ViewSet):
 
+    permission_classes = (AllowAny,)
+
     @action(detail=False, methods=["POST"])
     def register(self, request):
         # aceptar_politica = request.data.get("politica-privacidad")
