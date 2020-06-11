@@ -133,7 +133,15 @@ USE_TZ = True
 
 DJANGO_ROOT = dirname(abspath(__file__))
 SITE_HTDOCS = normpath(join(DJANGO_ROOT, '../htdocs'))
-STATIC_ROOT = normpath(join(SITE_HTDOCS, 'static')) + "/"
+STATIC_ROOT = normpath(join(DJANGO_ROOT, 'static')) + "/"
 STATIC_URL = '/static/'
-MEDIA_ROOT = normpath(join(SITE_HTDOCS, 'media'))
+MEDIA_ROOT = normpath(join(DJANGO_ROOT, 'media'))
 MEDIA_URL = '/media/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
