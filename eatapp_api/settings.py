@@ -28,8 +28,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['eatapp.o2w.es']
 
-APPEND_SLASH=False
-
 
 # Application definition
 
